@@ -8,7 +8,7 @@ dist/
 .env
 
 #Archivos del sistema operativo
-thumbs.db
+Thumbs.db
 desktop.ini
 .Ds_Store
 
