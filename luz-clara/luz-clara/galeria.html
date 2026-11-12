@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Escriba aquí su nombre completo">
+  <meta name="description" content="Galería del Estudio Luz Clara: retratos, producto y eventos fotografiados entre 2024 y 2026.">
+  <meta name="keywords" content="galería, portafolio, fotografía, retrato, producto, eventos">
+
+  <title>Galería | Estudio Luz Clara</title>
+
+  <link rel="icon" href="recursos/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CABECERA · idéntica a la de las otras páginas
+       ⚠ EL MENÚ AHORA TIENE CUATRO ENLACES.
+         Hay que actualizarlo también en index.html, nosotros.html
+         y contacto.html, o quedarán desincronizadas.
+       ═══════════════════════════════════════════════════════════ -->
+  <header id="cabecera" class="cabecera">
+
+    <a href="index.html" class="logo">
+      <svg class="logo-icono" width="38" height="38" viewBox="0 0 38 38"
+           xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Logo del Estudio Luz Clara: una cámara fotográfica">
+        <rect x="2" y="9" width="34" height="25" rx="4" fill="currentColor"/>
+        <rect x="12" y="4" width="14" height="6" rx="2" fill="currentColor"/>
+        <circle cx="19" cy="22" r="8" fill="#FFFFFF"/>
+        <circle cx="19" cy="22" r="5" fill="currentColor"/>
+        <circle cx="30" cy="15" r="2" fill="#FFFFFF"/>
+      </svg>
+      <span class="logo-texto">Estudio Luz Clara</span>
+    </a>
+
+    <nav class="navegacion" aria-label="Navegación principal">
+
+      <!-- ═══ S25 · EL BOTÓN HAMBURGUESA, SIN JAVASCRIPT ═══
+           La casilla guarda el estado abierto/cerrado. La etiqueta
+           actúa como interruptor: al pulsarla, la casilla cambia.
+           ⚠ LA CASILLA VA ANTES DEL <ul>: el selector ~ del CSS solo
+             alcanza hermanos POSTERIORES.                          -->
+      <input type="checkbox" id="abrir-menu" class="menu-control">
+      <label for="abrir-menu" class="menu-boton">
+        <span class="menu-barra"></span>
+        <span class="menu-barra"></span>
+        <span class="menu-barra"></span>
+        <span class="menu-texto">Menú</span>
+      </label>
+
+      <ul class="menu">
+        <li><a href="index.html" class="menu-enlace">Inicio</a></li>
+        <li><a href="galeria.html" class="menu-enlace activo">Galería</a></li>
+        <li><a href="nosotros.html" class="menu-enlace">Nosotros</a></li>
+        <li><a href="contacto.html" class="menu-enlace">Contacto</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main id="contenido">
+
+    <!-- ═══ ENCABEZADO DE PÁGINA · clase reutilizada ═══ -->
+    <section id="intro" class="pagina-encabezado">
+      <h1 class="pagina-titulo">Galería</h1>
+      <p class="pagina-bajada">
+        Una selección de lo que hemos fotografiado entre 2024 y 2026.
+      </p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CIFRAS · cuatro datos · se maquetan con CSS GRID
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="cifras" class="seccion">
+      <div class="rejilla-cifras">
+
+        <div class="cifra">
+          <p class="cifra-numero">480</p>
+          <p class="cifra-texto">sesiones realizadas</p>
+        </div>
+
+        <div class="cifra">
+          <p class="cifra-numero">12</p>
+          <p class="cifra-texto">años de trayectoria</p>
+        </div>
+
+        <div class="cifra">
+          <p class="cifra-numero">36</p>
+          <p class="cifra-texto">marcas acompañadas</p>
+        </div>
+
+        <div class="cifra">
+          <p class="cifra-numero">98%</p>
+          <p class="cifra-texto">volvería a contratarnos</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CATEGORÍAS · etiquetas · se maquetan con FLEXBOX
+         ⚠ Son enlaces a las anclas de cada sección: sin JavaScript
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="categorias" class="seccion">
+      <h2 class="seccion-titulo">Explorar por categoría</h2>
+      <p class="seccion-entrada">
+        Cada enlace lleva a su sección dentro de esta misma página.
+      </p>
+
+      <ul class="fila-etiquetas">
+        <li><a href="#mosaico" class="etiqueta">Todo el trabajo</a></li>
+        <li><a href="#retrato" class="etiqueta">Retrato</a></li>
+        <li><a href="#producto" class="etiqueta">Producto</a></li>
+        <li><a href="#eventos" class="etiqueta">Eventos</a></li>
+      </ul>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         MOSAICO PRINCIPAL · CSS GRID con piezas de distinto tamaño
+         Es la pieza central de esta página
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="mosaico" class="seccion seccion-alterna">
+      <h2 class="seccion-titulo">Todo el trabajo</h2>
+
+      <div class="mosaico">
+
+        <!-- ▸▸ recursos/g-01.jpg · 1200 × 800 px · ocupa 2 columnas -->
+        <figure class="pieza pieza-ancha">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-01-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-01-mediana.jpg">
+            <img src="recursos/g-01-pequena.jpg" alt="Retrato de una mujer junto a una ventana con luz lateral"
+               width="1200" height="800" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Luz de ventana</span>
+            <span class="pieza-categoria">Retrato</span>
+          </figcaption>
+        </figure>
+
+        <!-- ▸▸ recursos/g-02.jpg · 600 × 900 px · ocupa 2 filas -->
+        <figure class="pieza pieza-alta">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-02-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-02-mediana.jpg">
+            <img src="recursos/g-02-pequena.jpg" alt="Fotografía vertical de una botella de cerámica sobre madera"
+               width="600" height="900" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Cerámica de Guaitil</span>
+            <span class="pieza-categoria">Producto</span>
+          </figcaption>
+        </figure>
+
+        <!-- ▸▸ recursos/g-03.jpg · 600 × 600 px -->
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-03-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-03-mediana.jpg">
+            <img src="recursos/g-03-pequena.jpg" alt="Detalle de manos entrelazadas durante una ceremonia"
+               width="600" height="600" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Ceremonia</span>
+            <span class="pieza-categoria">Eventos</span>
+          </figcaption>
+        </figure>
+
+        <!-- ▸▸ recursos/g-04.jpg · 600 × 600 px -->
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-04-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-04-mediana.jpg">
+            <img src="recursos/g-04-pequena.jpg" alt="Retrato en blanco y negro de un hombre mayor sonriendo"
+               width="600" height="600" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Don Rafael</span>
+            <span class="pieza-categoria">Retrato</span>
+          </figcaption>
+        </figure>
+
+        <!-- ▸▸ recursos/g-05.jpg · 1200 × 1200 px · ocupa 2×2 -->
+        <figure class="pieza pieza-grande">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-05-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-05-mediana.jpg">
+            <img src="recursos/g-05-pequena.jpg" alt="Vista general de un salón durante una celebración al atardecer"
+               width="1200" height="1200" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Atardecer en Santa Ana</span>
+            <span class="pieza-categoria">Eventos</span>
+          </figcaption>
+        </figure>
+
+        <!-- ▸▸ recursos/g-06.jpg · 600 × 600 px -->
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-06-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-06-mediana.jpg">
+            <img src="recursos/g-06-pequena.jpg" alt="Taza de café sobre fondo neutro con sombra marcada"
+               width="600" height="600" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Serie café</span>
+            <span class="pieza-categoria">Producto</span>
+          </figcaption>
+        </figure>
+
+        <!-- ▸▸ recursos/g-07.jpg · 1200 × 800 px · ocupa 2 columnas -->
+        <figure class="pieza pieza-ancha">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-07-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-07-mediana.jpg">
+            <img src="recursos/g-07-pequena.jpg" alt="Grupo de personas conversando durante un evento corporativo"
+               width="1200" height="800" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Encuentro anual</span>
+            <span class="pieza-categoria">Eventos</span>
+          </figcaption>
+        </figure>
+
+        <!-- ▸▸ recursos/g-08.jpg · 600 × 900 px · ocupa 2 filas -->
+        <figure class="pieza pieza-alta">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-08-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-08-mediana.jpg">
+            <img src="recursos/g-08-pequena.jpg" alt="Retrato de cuerpo entero de una bailarina en el estudio"
+               width="600" height="900" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Estudio de movimiento</span>
+            <span class="pieza-categoria">Retrato</span>
+          </figcaption>
+        </figure>
+
+        <!-- ▸▸ recursos/g-09.jpg · 600 × 600 px -->
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-09-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-09-mediana.jpg">
+            <img src="recursos/g-09-pequena.jpg" alt="Conjunto de joyas artesanales sobre tela oscura"
+               width="600" height="600" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Joyería artesanal</span>
+            <span class="pieza-categoria">Producto</span>
+          </figcaption>
+        </figure>
+
+        <!-- ▸▸ recursos/g-10.jpg · 600 × 600 px -->
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-10-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-10-mediana.jpg">
+            <img src="recursos/g-10-pequena.jpg" alt="Niña riendo durante una sesión familiar en exteriores"
+               width="600" height="600" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Sesión familiar</span>
+            <span class="pieza-categoria">Retrato</span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECCIONES POR CATEGORÍA · destino de las etiquetas
+         Reutilizan la rejilla de la página de inicio
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="retrato" class="seccion">
+      <h2 class="seccion-titulo">Retrato</h2>
+      <p class="seccion-entrada">
+        Sesiones individuales, familiares y de perfil profesional.
+      </p>
+
+      <div class="rejilla-categoria">
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-01-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-01-mediana.jpg">
+            <img src="recursos/g-01-pequena.jpg" alt="Retrato con luz de ventana"
+               width="1200" height="800" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Luz de ventana</span>
+          </figcaption>
+        </figure>
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-04-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-04-mediana.jpg">
+            <img src="recursos/g-04-pequena.jpg" alt="Retrato en blanco y negro"
+               width="600" height="600" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Don Rafael</span>
+          </figcaption>
+        </figure>
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-08-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-08-mediana.jpg">
+            <img src="recursos/g-08-pequena.jpg" alt="Retrato de una bailarina"
+               width="600" height="900" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Estudio de movimiento</span>
+          </figcaption>
+        </figure>
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-10-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-10-mediana.jpg">
+            <img src="recursos/g-10-pequena.jpg" alt="Sesión familiar en exteriores"
+               width="600" height="600" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Sesión familiar</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="producto" class="seccion seccion-alterna">
+      <h2 class="seccion-titulo">Producto</h2>
+      <p class="seccion-entrada">
+        Catálogos para tiendas en línea y material para redes sociales.
+      </p>
+
+      <div class="rejilla-categoria">
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-02-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-02-mediana.jpg">
+            <img src="recursos/g-02-pequena.jpg" alt="Botella de cerámica"
+               width="600" height="900" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Cerámica de Guaitil</span>
+          </figcaption>
+        </figure>
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-06-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-06-mediana.jpg">
+            <img src="recursos/g-06-pequena.jpg" alt="Taza de café"
+               width="600" height="600" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Serie café</span>
+          </figcaption>
+        </figure>
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-09-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-09-mediana.jpg">
+            <img src="recursos/g-09-pequena.jpg" alt="Joyas artesanales"
+               width="600" height="600" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Joyería artesanal</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="eventos" class="seccion">
+      <h2 class="seccion-titulo">Eventos</h2>
+      <p class="seccion-entrada">
+        Bodas, graduaciones y actividades corporativas.
+      </p>
+
+      <div class="rejilla-categoria">
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-03-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-03-mediana.jpg">
+            <img src="recursos/g-03-pequena.jpg" alt="Detalle de una ceremonia"
+               width="600" height="600" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Ceremonia</span>
+          </figcaption>
+        </figure>
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-05-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-05-mediana.jpg">
+            <img src="recursos/g-05-pequena.jpg" alt="Salón durante una celebración"
+               width="1200" height="1200" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Atardecer en Santa Ana</span>
+          </figcaption>
+        </figure>
+        <figure class="pieza">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="recursos/g-07-grande.jpg">
+            <source media="(min-width: 768px)"  srcset="recursos/g-07-mediana.jpg">
+            <img src="recursos/g-07-pequena.jpg" alt="Evento corporativo"
+               width="1200" height="800" loading="lazy">
+          </picture>
+          <figcaption class="pieza-info">
+            <span class="pieza-titulo">Encuentro anual</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═══ LLAMADO FINAL · reutiliza el botón del sitio ═══ -->
+    <section id="llamado" class="seccion">
+      <div class="llamado">
+        <h2 class="llamado-titulo">¿Le interesa trabajar con nosotros?</h2>
+        <p class="llamado-texto">
+          Cuéntenos qué necesita y le respondemos dentro de las siguientes
+          48 horas hábiles.
+        </p>
+        <a href="contacto.html" class="boton boton-principal">Solicitar una sesión</a>
+      </div>
+    </section>
+
+    <p class="volver-arriba"><a href="#cabecera">Volver al inicio de la página</a></p>
+
+  </main>
+
+  <!-- ═══ PIE · idéntico al de las otras páginas ═══ -->
+  <footer id="pie" class="pie">
+    <div class="pie-columnas">
+
+      <div class="pie-bloque">
+        <h2 class="pie-titulo">Estudio Luz Clara</h2>
+        <p class="pie-texto">Fotografía con luz natural desde 2014.</p>
+      </div>
+
+      <div class="pie-bloque">
+        <h2 class="pie-titulo">Contacto</h2>
+        <address class="pie-datos">
+          Barrio Escalante, San José<br>
+          Costa Rica<br>
+          <a href="mailto:hola@ejemplo.com" class="pie-enlace">hola@ejemplo.com</a>
+        </address>
+      </div>
+
+      <div class="pie-bloque">
+        <h2 class="pie-titulo">Horario</h2>
+        <p class="pie-texto">
+          Lunes a viernes<br>
+          9:00 a. m. – 6:00 p. m.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="pie-creditos"><small>&copy; 2026 · Estudio Luz Clara</small></p>
+  </footer>
+
+</body>
+
+</html>
