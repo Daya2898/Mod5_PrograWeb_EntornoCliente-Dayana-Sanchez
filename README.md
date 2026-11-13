@@ -87,7 +87,7 @@ Mod5_PrograWeb_EntornoCliente-Nombre/
         <tr>
             <td align="center">S03</td>
             <td>Entorno en el laboratorio y mi primer script</td>
-            <td align="left">(Completar al terminar la sesión)</td>
+            <td align="left">Instalacion del entorno, la etiqueta script</td>
             <td align="center"><a href="UA1/S03/" target="_blank" rel="noopener">Ver</a></td>
             <td align="center"><a href="UA1/S03/capturas/" target="_blank" rel="noopener">Ver</a></td>
         </tr>
