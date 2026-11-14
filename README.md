@@ -497,25 +497,25 @@ CÓMO USAR ESTE BLOQUE (Clase 04)
 
 | #   | Expresión        | Mi predicción | Lo que mostró la consola |
 | --- | ---------------- | ------------- | ------------------------ |
-| 1   | `typeof "95000"` |               |                          |
-| 2   | `typeof 95000`   |               |                          |
-| 3   | `typeof 9.5`     |               |                          |
-| 4   | `typeof "true"`  |               |                          |
-| 5   | `"5" + 2`        |               |                          |
-| 6   | `"5" - 2`        |               |                          |
-| 7   | `5 === "5"`      |               |                          |
-| 8   | `10 % 3`         |               |                          |
-| 9   | `true && false`  |               |                          |
-| 10  | `!(3 > 2)`       |               |                          |
+| 1   | `typeof "95000"` |     string    |     dio string           |
+| 2   | `typeof 95000`   |     number    |     dio number           |
+| 3   | `typeof 9.5`     |     number    |     dio number           |
+| 4   | `typeof "true"`  |    string     |     dio string           |
+| 5   | `"5" + 2`        |      52       |     dio 54               |
+| 6   | `"5" - 2`        |      3        |     dio 3                |
+| 7   | `5 === "5"`      |      false    |     false                |
+| 8   | `10 % 3`         |      1        |          1               |
+| 9   | `true && false`  |      false    |      false               |
+| 10  | `!(3 > 2)`       |      false    |      false               |
 
 **Autoevaluación**
 
 | Indicador                                                 | Sí  | Aún no |
 | --------------------------------------------------------- | --- | ------ |
-| Uso const si el valor no cambia y let si cambia.          |     |        |
-| Reconozco cadenas, números, booleanos y null.             |     |        |
-| Calculo con operadores en lugar de escribir el resultado. |     |        |
-| Sé que prompt devuelve texto y lo convierto con Number.   |     |        |
+| Uso const si el valor no cambia y let si cambia.          |  X  |        |
+| Reconozco cadenas, números, booleanos y null.             |  X  |        |
+| Calculo con operadores en lugar de escribir el resultado. |  X  |        |
+| Sé que prompt devuelve texto y lo convierto con Number.   |  X  |        |
 
 </details>
 
