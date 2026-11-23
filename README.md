@@ -420,23 +420,23 @@ La diferencia más importante que encontré entre C y JavaScript:
 
 Archivo: [pruebas/js/pruebas.js](UA1/S02/pruebas/js/pruebas.js)
 
-| Línea | Qué mostró la consola | Tipo | Corrección |
-| ----- | --------------------- | ---- | ---------- |
-| 2     |                       |      |            |
-| 3     |                       |      |            |
-| 4     |                       |      |            |
-| 5     |                       |      |            |
-| 6     |                       |      |            |
-| 7     |                       |      |            |
+| Línea | Qué mostró la consola                       | Tipo      | Corrección                         |
+| ----- | ------------------------------------------- | --------- | ---------------------------------- |
+| 2     | Promedio: 80                                | correcta  | ....                               |
+| 3     | x Uncaught SyntaxError:Unexpected token ')' | sintáxis  | Eliminar parentesis extra          |
+| 4     | Total: 1500900                              | Semántica | "Total:"+ (1500+900);              |
+| 5     | Bienvenida al "INA"                         | Correcta  | ...                                |
+| 6     | Perímetro de 4 x 3: 10                      | Semántica | (4+3)\*2                           |
+| 7     | SyntaxError.missing) after argument list    | Sintaxis  | console.log('Bienvenida al "INA"') |
 
 **Autoevaluación**
 
 | Indicador                                                                                      | Sí  | Aún no |
 | ---------------------------------------------------------------------------------------------- | --- | ------ |
-| Copié Luz Clara en `luz-clara/` y Casa Tomillo en `casa-tomillo/`, y los abro con Live Server. |     |        |
-| Mi repositorio está en GitHub con el README.                                                   |     |        |
-| Distingo un error de sintaxis de uno de semántica.                                             |     |        |
-| Uso `//` para aislar un error y seguir probando.                                               |     |        |
+| Copié Luz Clara en `luz-clara/` y Casa Tomillo en `casa-tomillo/`, y los abro con Live Server. | X   |        |
+| Mi repositorio está en GitHub con el README.                                                   | X   |        |
+| Distingo un error de sintaxis de uno de semántica.                                             | X   |        |
+| Uso `//` para aislar un error y seguir probando.                                               | X   |        |
 
 </details>
 
@@ -447,32 +447,32 @@ Archivos: [horario/js/horarios.](UA1/S03/horario/js/horarios.js) · [luz-clara/j
 
 **Cacería de errores**
 
-| #   | Mensaje de la consola | Archivo:línea | Corrección |
-| --- | --------------------- | ------------- | ---------- |
-| 1   |                       |               |            |
-| 2   |                       |               |            |
-| 3   |                       |               |            |
-| 4   |                       |               |            |
+| #   | Mensaje de la consola                                                  | Archivo:línea                        | Corrección                             |
+| --- | ---------------------------------------------------------------------- | ------------------------------------ | -------------------------------------- |
+| 1   | GET http://127.0.0.1:5500/js/horario.js net:ERR_ABORTED 404(Not Found) | horario.js                           | horario.js con s                       |
+| 2   | SyntaxError:Invalid or unexpected token                                | ("Mar a sáb:\t10:00 a.m a 7:00 p.m); | ("Mar a sáb:\t10:00 a.m a 7:00 p.m."); |
+| 3   | ReferentError:... is not defined                                       | console.log("Domingo:\tcerrado")     | console.log en miniscula todo          |
+| 4   | No pasa nada pero el codigo debe llevarlas                             | console.log("Lunes:\tcerrado")       | console.log("Lunes:\tcerrado");        |
 
 **Reto MVC**
 
-| Elemento | Componente | Justificación |
-| -------- | ---------- | ------------- |
-| 1        |            |               |
-| 2        |            |               |
-| 3        |            |               |
-| 4        |            |               |
-| 5        |            |               |
-| 6        |            |               |
+| Elemento | Componente  | Justificación |
+| -------- | ----------- | ------------- |
+| 1        | Modelo      | Guarda datos  |
+| 2        | Vista       | Estilos       |
+| 3        | Controlador | Recibe click  |
+| 4        | Modelo      | Calcula       |
+| 5        | Vista       | Muestra       |
+| 6        | Controlador | Coordina      |
 
 **Autoevaluación**
 
 | Indicador                                                       | Sí  | Aún no |
 | --------------------------------------------------------------- | --- | ------ |
-| Enlazo un archivo .js al final del body o en el head con defer. |     |        |
-| Uso comentarios de línea y de bloque.                           |     |        |
-| Uso \n, \t, \", \\ y \u en textos.                              |     |        |
-| Leo el tipo de error, el mensaje y la línea en la consola.      |     |        |
+| Enlazo un archivo .js al final del body o en el head con defer. | X   |        |
+| Uso comentarios de línea y de bloque.                           | X   |        |
+| Uso \n, \t, \", \\ y \u en textos.                              | X   |        |
+| Leo el tipo de error, el mensaje y la línea en la consola.      | X   |        |
 
 </details>
 
@@ -497,25 +497,25 @@ CÓMO USAR ESTE BLOQUE (Clase 04)
 
 | #   | Expresión        | Mi predicción | Lo que mostró la consola |
 | --- | ---------------- | ------------- | ------------------------ |
-| 1   | `typeof "95000"` |     string    |     dio string           |
-| 2   | `typeof 95000`   |     number    |     dio number           |
-| 3   | `typeof 9.5`     |     number    |     dio number           |
-| 4   | `typeof "true"`  |    string     |     dio string           |
-| 5   | `"5" + 2`        |      52       |     dio 54               |
-| 6   | `"5" - 2`        |      3        |     dio 3                |
-| 7   | `5 === "5"`      |      false    |     false                |
-| 8   | `10 % 3`         |      1        |          1               |
-| 9   | `true && false`  |      false    |      false               |
-| 10  | `!(3 > 2)`       |      false    |      false               |
+| 1   | `typeof "95000"` | string        | dio string               |
+| 2   | `typeof 95000`   | number        | dio number               |
+| 3   | `typeof 9.5`     | number        | dio number               |
+| 4   | `typeof "true"`  | string        | dio string               |
+| 5   | `"5" + 2`        | 52            | dio 54                   |
+| 6   | `"5" - 2`        | 3             | dio 3                    |
+| 7   | `5 === "5"`      | false         | false                    |
+| 8   | `10 % 3`         | 1             | 1                        |
+| 9   | `true && false`  | false         | false                    |
+| 10  | `!(3 > 2)`       | false         | false                    |
 
 **Autoevaluación**
 
 | Indicador                                                 | Sí  | Aún no |
 | --------------------------------------------------------- | --- | ------ |
-| Uso const si el valor no cambia y let si cambia.          |  X  |        |
-| Reconozco cadenas, números, booleanos y null.             |  X  |        |
-| Calculo con operadores en lugar de escribir el resultado. |  X  |        |
-| Sé que prompt devuelve texto y lo convierto con Number.   |  X  |        |
+| Uso const si el valor no cambia y let si cambia.          | X   |        |
+| Reconozco cadenas, números, booleanos y null.             | X   |        |
+| Calculo con operadores en lugar de escribir el resultado. | X   |        |
+| Sé que prompt devuelve texto y lo convierto con Number.   | X   |        |
 
 </details>
 <!--
@@ -537,28 +537,28 @@ CÓMO USAR ESTE BLOQUE (Clase 05)
 
 **Predicciones**
 
-| # | Expresión | Mi predicción | Lo que mostró la consola |
-|---|---|---|---|
-| 1 | `Math.round(2.5)` |  |  |
-| 2 | `Math.floor(9.99)` |  |  |
-| 3 | `"Luz".length` |  |  |
-| 4 | `"casa".toUpperCase()` |  |  |
-| 5 | `parseInt("12.9 horas")` |  |  |
-| 6 | `Number("doce")` |  |  |
-| 7 | `(3.14159).toFixed(2)` |  |  |
-| 8 | `typeof (10).toString()` |  |  |
-| 9 | `new Date(2026, 0, 1).getMonth()` |  |  |
-| 10 | <code>`2 + 3 = ${2 + 3}`</code> |  |  |
+| #   | Expresión                         | Mi predicción | Lo que mostró la consola |
+| --- | --------------------------------- | ------------- | ------------------------ |
+| 1   | `Math.round(2.5)`                 | 3             | 3                        |
+| 2   | `Math.floor(9.99)`                | 9             | 9                        |
+| 3   | `"Luz".length`                    | 3             | 3                        |
+| 4   | `"casa".toUpperCase()`            | CASA          | CASA                     |
+| 5   | `parseInt("12.9 horas")`          | 12            | 12                       |
+| 6   | `Number("doce")`                  | NaN           | NaN                      |
+| 7   | `(3.14159).toFixed(2)`            | 3.14          | 3.14\*\*                 |
+| 8   | `typeof (10).toString()`          | string        | string                   |
+| 9   | `new Date(2026, 0, 1).getMonth()` | Enero         | 0                        |
+| 10  | <code>`2 + 3 = ${2 + 3}`</code>   | 2+5 = 5       | 2 + 5 = 5                |
 
 **Autoevaluación**
 
-| Indicador | Sí | Aún no |
-|---|---|---|
-| Uso métodos de Math (round, floor, ceil). | | |
-| Limpio y transformo textos (trim, toUpperCase, length). | | |
-| Creo fechas recordando que los meses empiezan en 0. | | |
-| Muestro montos en colones con Intl. | | |
-| Elijo entre Number, parseInt y parseFloat. | | |
+| Indicador                                               | Sí  | Aún no |
+| ------------------------------------------------------- | --- | ------ |
+| Uso métodos de Math (round, floor, ceil).               | X   |        |
+| Limpio y transformo textos (trim, toUpperCase, length). | X   |        |
+| Creo fechas recordando que los meses empiezan en 0.     | X   |        |
+| Muestro montos en colones con Intl.                     | X   |        |
+| Elijo entre Number, parseInt y parseFloat.              | X   |        |
 
 </details>
 
@@ -581,34 +581,44 @@ CÓMO USAR ESTE BLOQUE (Clase 06)
 
 **Ejercicio 1 · Pruebas de cupos.js**
 
-| Prueba | Mensajes que mostró la consola |
-|---|---|
-| cupos = 6 |`Hay cupos disponibles` / `Quedan 6 cupos` / `No necesita experiencia`  |
-| cupos = 2 |`¡Últimos cupos!` / `Quedan 2 cupos` / `No necesita experiencia` |
-| cupos = 0 | `Taller lleno` / `Quedan 0 cupos` / `No necesita experiencia` |
+| Prueba               | Mensajes que mostró la consola                                           |
+| -------------------- | ------------------------------------------------------------------------ |
+| cupos = 6            | `Hay cupos disponibles` / `Quedan 6 cupos` / `No necesita experiencia`   |
+| cupos = 2            | `¡Últimos cupos!` / `Quedan 2 cupos` / `No necesita experiencia`         |
+| cupos = 0            | `Taller lleno` / `Quedan 0 cupos` / `No necesita experiencia`            |
 | nivel = "Intermedio" | `Hay cupos disponibles` / `Quedan 6 cupos` / `Requiere el nivel inicial` |
+
+**Ejercicio 2 · Horarios**
+
+| Entrada  | Resultado esperado                         |
+| -------- | ------------------------------------------ |
+| Sábado   | El sábado abre de 10:00 a. m. a 7:00 p. m. |
+| lunes    | El lunes está cerrado                      |
+| Cancelar | No se indicó un día.                       |
+
+Siempre se muestra -> (Casa Tomillo · Barrio Amón) al final.
+El default sigue el enunciado
 
 **Ejercicio 3 · Cacería con DevTools**
 
-| Pregunta | Respuesta |
-|---|---|
-| ¿En qué línea puso el punto de interrupción? |Línea 4 (`if (monto >= 50000)`)  |
-| ¿Qué valor tenía descuento al detenerse? |`5`  |
-| ¿Cuál era la causa del error? | `monto >= 50000` estaba antes que `monto >= 100000`, entonces un monto de `120000` entraba al primer `if` y no llegaba al `else if` de `100000` |
-| ¿Cómo lo corrigió? | Puse primero `if (monto >= 100000)` (`descuento = 10`) y luego `else if (monto >= 50000)` (`descuento = 5`) |
+| Pregunta                                     | Respuesta                                                                                                                                       |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| ¿En qué línea puso el punto de interrupción? | Línea 4 (`if (monto >= 50000)`)                                                                                                                 |
+| ¿Qué valor tenía descuento al detenerse?     | `5`                                                                                                                                             |
+| ¿Cuál era la causa del error?                | `monto >= 50000` estaba antes que `monto >= 100000`, entonces un monto de `120000` entraba al primer `if` y no llegaba al `else if` de `100000` |
+| ¿Cómo lo corrigió?                           | Puse primero `if (monto >= 100000)` (`descuento = 10`) y luego `else if (monto >= 50000)` (`descuento = 5`)                                     |
 
 **Autoevaluación**
 
-| Indicador | Sí | Aún no |
-|---|---|---|
-| Escribo if / else if / else con las condiciones en el orden correcto. |X | |
-| Uso el ternario para elegir entre dos valores. |X | |
-| Escribo switch con break y default. |X | |
-| Pongo un punto de interrupción y avanzo con F10. | |X |
-| Uso try / catch para que el programa no se detenga. |X | |
+| Indicador                                                             | Sí  | Aún no |
+| --------------------------------------------------------------------- | --- | ------ |
+| Escribo if / else if / else con las condiciones en el orden correcto. | X   |        |
+| Uso el ternario para elegir entre dos valores.                        | X   |        |
+| Escribo switch con break y default.                                   | X   |        |
+| Pongo un punto de interrupción y avanzo con F10.                      |     | X      |
+| Uso try / catch para que el programa no se detenga.                   | X   |        |
 
 </details>
-
 
 > 📌 **AQUÍ SE PEGAN LOS BLOQUES NUEVOS.** Pegue el bloque de cada clase (desde `<details>` hasta `</details>`) justo **arriba** de este aviso. El aviso queda siempre al final de la sección.
 
