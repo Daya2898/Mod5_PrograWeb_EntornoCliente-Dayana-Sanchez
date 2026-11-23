@@ -583,29 +583,29 @@ CÓMO USAR ESTE BLOQUE (Clase 06)
 
 | Prueba | Mensajes que mostró la consola |
 |---|---|
-| cupos = 6 |  |
-| cupos = 2 |  |
-| cupos = 0 |  |
-| nivel = "Intermedio" |  |
+| cupos = 6 |`Hay cupos disponibles` / `Quedan 6 cupos` / `No necesita experiencia`  |
+| cupos = 2 |`¡Últimos cupos!` / `Quedan 2 cupos` / `No necesita experiencia` |
+| cupos = 0 | `Taller lleno` / `Quedan 0 cupos` / `No necesita experiencia` |
+| nivel = "Intermedio" | `Hay cupos disponibles` / `Quedan 6 cupos` / `Requiere el nivel inicial` |
 
 **Ejercicio 3 · Cacería con DevTools**
 
 | Pregunta | Respuesta |
 |---|---|
-| ¿En qué línea puso el punto de interrupción? |  |
-| ¿Qué valor tenía descuento al detenerse? |  |
-| ¿Cuál era la causa del error? |  |
-| ¿Cómo lo corrigió? |  |
+| ¿En qué línea puso el punto de interrupción? |Línea 4 (`if (monto >= 50000)`)  |
+| ¿Qué valor tenía descuento al detenerse? |`5`  |
+| ¿Cuál era la causa del error? | `monto >= 50000` estaba antes que `monto >= 100000`, entonces un monto de `120000` entraba al primer `if` y no llegaba al `else if` de `100000` |
+| ¿Cómo lo corrigió? | Puse primero `if (monto >= 100000)` (`descuento = 10`) y luego `else if (monto >= 50000)` (`descuento = 5`) |
 
 **Autoevaluación**
 
 | Indicador | Sí | Aún no |
 |---|---|---|
-| Escribo if / else if / else con las condiciones en el orden correcto. | | |
-| Uso el ternario para elegir entre dos valores. | | |
-| Escribo switch con break y default. | | |
-| Pongo un punto de interrupción y avanzo con F10. | | |
-| Uso try / catch para que el programa no se detenga. | | |
+| Escribo if / else if / else con las condiciones en el orden correcto. |X | |
+| Uso el ternario para elegir entre dos valores. |X | |
+| Escribo switch con break y default. |X | |
+| Pongo un punto de interrupción y avanzo con F10. | |X |
+| Uso try / catch para que el programa no se detenga. |X | |
 
 </details>
 
