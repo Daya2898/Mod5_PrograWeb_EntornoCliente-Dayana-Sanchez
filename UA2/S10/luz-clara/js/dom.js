@@ -19,7 +19,7 @@ for (const hijo of cuerpo.children) {
 const principal = cuerpo.children[1];
 //parentElement SUBE un nivel: el padre de <main> es <body>
 console.log(`Padre de <main>: ${principal.parentElement.tagName}`);
-//firstElementChild BAJA un nivel: al primer hijo de <main> es <portada>
+//firstElementChild BAJA un nivel: al primer hijo de <main>
 console.log(`Primer hijo de <main>: ${principal.firstElementChild.id}`);
 //children.length: cuantas secciones hay dentro de <main>
 console.log(`Secciones dentro de <main>: ${principal.children.length}`);
