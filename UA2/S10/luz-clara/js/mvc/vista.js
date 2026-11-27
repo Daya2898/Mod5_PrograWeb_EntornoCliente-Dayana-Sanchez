@@ -1,17 +1,30 @@
 //vista.js - VISTA: Muestra los datos (por ahora en consola)
 class VsitaReservas {
-  //la clase de la vista. No tiene contructor porque no necesita guardar datos propios. JS le pone uno vacío.
+  //recibe la ista de reservas del modelo y la escribe en el <ol>
   mostrar(lista) {
-    lista.forEach((r, i) => {
-      //i es la posición (r, i) dos parametros del callback
-      //forEach entrega el elemento (r) y su posición (i) que empieza en cero
-      console.log(`${i + 1}. ${r.cliente}. ${r.servicio}`); //r.cliente . r.servicio son propiedades de cada reserva. La vista solo lee datos, no los cambia.
+    //el <ol> id="lista-reservas" que se agregó en contacto.html
+    const ol = document.getElementById("lista-reservas");
+    //varciar el ol para no repetir reservas
+    ol.innerHTML = "";
+    //r: cada reserva (objeto Reserva del modelo)
+    lista.forEach((r) => {
+      const li = document.createElement("li");
+      //el texto: cliente y servicio de la reserva
+      li.textContent = `${r.cliente} . ${r.servicio}`;
+      //Lo agrega al final de <ol>
+      ol.append(li);
     });
   }
+  //Recibe el total de ingresos y los va escribir en <p id="ingresos">
   mostrarIngresos(monto) {
-    console.log(`Ingresos: ¢${monto.toLocaleString("es-CR")}`);
+    const p = document.getElementById("ingresos");
+    const m = monto.toLocaleString("es-CR");
+    //innerHTML porque lleva la etiqueta <strong>
+    p.innerHTML = `Ingresos: <strong>¢${m}</strong>`;
   }
   error(texto) {
-    console.error(texto); //mensaje ne rojo
+    const aviso = document.getElementById("aviso-reservas");
+    aviso.textContent = texto;
+    console.error(texto);
   }
 }
